@@ -1,0 +1,114 @@
+{% load static %}
+		<!--Main Footer-->
+		<footer class="main-footer">
+			<!--Widgets Section-->
+			<div class="widgets-section">
+				<div class="auto-container">
+					<div class="row clearfix">
+						<div class="column col-md-12 col-sm-12 col-xs-12">
+							<div class="row clearfix">
+
+								<!--Footer Column-->
+								<div class="footer-column col-md-4 col-sm-6 col-xs-12">
+									<div class="footer-widget logo-widget">
+										<div class="logo">
+											<a href="index.html"><img src="images/footer-logo.png" alt=""></a>
+										</div>
+										<div class="widget-content">
+											<div class="text">Architecture provides an opportunity to improve the conditions for people, communities, society, businesses and the environment.</div>
+										</div>
+									</div>
+								</div>
+
+								<!--Footer Column-->
+								<div class="footer-column col-md-5 col-sm-6 col-xs-12">
+									<div class="footer-widget link-widget">
+										<div class="footer-title">
+											<h2>Contact Details</h2>
+											<div class="separator"></div>
+										</div>
+										<div class="widget-content">
+											<ul>
+												<li><span>Email:</span> {{data.email}}</a></li>
+												<li><span>Phone:</span> {{data.phone}}</li>
+												<li><span>Address:</span> {{data.address}}</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<!--Footer Column-->
+								<div class="footer-column col-md-3 col-sm-6 col-xs-12">
+									<div class="footer-widget logo-widget">
+										<div class="footer-title">
+											<h2>Follow Us</h2>
+											<div class="separator"></div>
+										</div>
+										<div class="widget-content">
+											<ul class="social-icon-two">
+												<li><a href="{{data.instagram_url}}"><span class="fab fa-instagram"></span></a></li>
+												<li><a href="{{data.facebook_url}}"><span class="fab fa-facebook-f"></span></a></li>
+												<li><a href="{{data.youtube_url}}"><span class="fab fa-youtube"></span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--Footer Bottom-->
+			<div class="footer-bottom">
+				<div class="auto-container">
+					<div class="row clearfix">
+						<div class="column col-md-6 col-sm-6 col-xs-12">
+							<div class="copyright">Copyright &copy; 2023 {{data.company_name}}. </div>
+						</div>
+						<div class="column col-md-6 col-sm-6 col-xs-12">
+							<ul class="foter-nav">
+								<li><a href="#">Opening Hours - {{data.opening_hours}}</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</footer>
+	</div>
+	<!--End pagewrapper-->
+
+	<!--Scroll to top-->
+	<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script><script src="{% static 'js/jquery.js' %}"></script>
+	<!--Revolution Slider-->
+	<script src="{% static 'plugins/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+	<script src="{% static 'plugins/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+	<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+	<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+	<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+	<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+	<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+	<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+	<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+	<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+	<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+	<script src="{% static 'js/main-slider-script.js' %}"></script>
+
+	<script src="{% static 'js/modernizr.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
+	<script src="{% static 'js/jquery.fancybox-media.js' %}"></script>
+	<script src="{% static 'js/owl.js' %}"></script>
+	<script src="{% static 'js/mixitup.js' %}"></script>
+	<script src="{% static 'js/appear.js' %}"></script>
+
+
+	<script src="{% static 'js/script.js' %}"></script>
+	<script src="https://maps.google.com/maps/api/js?key=AIzaSyBCxDh44L1l9uSfM4UIn-OCMPfQKRLwjkQ"></script>
+	<script src="{% static 'js/map-script.js' %}"></script>
+</body>
+</html>

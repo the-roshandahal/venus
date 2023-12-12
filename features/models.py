@@ -4,28 +4,19 @@ from django.contrib.auth.models import User
 
 class CompanySetup(models.Model):
     data_set = models.CharField(max_length=200)
-    color_logo = models.ImageField(upload_to="logos",verbose_name="Color Logo (170*55)")
-    white_logo = models.ImageField(upload_to="logos",verbose_name="White Logo (170*55)")
+    logo = models.ImageField(upload_to="logos",verbose_name="White Logo (236*65)")
 
     company_name = models.CharField(max_length=255)
 
-    location = models.CharField(max_length=200)
-
-    contact = models.CharField(max_length=200)
-    secondary_contact = models.CharField(max_length=200, null=True, blank=True)
-
     email = models.CharField(max_length=200)
-    secondary_email = models.CharField(max_length=200, null=True, blank=True)
+    phone = models.CharField(max_length=200)
+    address = models.CharField(max_length=200)
 
     opening_hours = models.CharField(max_length=200)
     
     facebook_url = models.URLField(null=True,blank=True)
     instagram_url = models.URLField(null=True,blank=True)
-    linkedin_url = models.URLField(null=True,blank=True)
     youtube_url = models.URLField(null=True,blank=True)
-    
-    privacy_policy = models.TextField()
-    terms_and_conditions = models.TextField()
 
     created = models.DateField(auto_now_add=True)
     def __str__(self):
@@ -34,6 +25,33 @@ class CompanySetup(models.Model):
         verbose_name_plural = "01. Company Setup" 
 
 
+
+class Contact(models.Model):
+    name = models.TextField()
+    email = models.TextField()
+    contact = models.TextField()
+    subject = models.TextField(null=True, blank=True)
+    message = models.TextField()
+    created = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+    class Meta:
+        verbose_name_plural = "05. Contact"
+
+
+
+
+class Blog(models.Model):
+    title = models.CharField(max_length=200)
+    blog = models.TextField()
+    image = models.ImageField(upload_to="blogs_images/",verbose_name="Blog Image (800*460)")
+    slug = AutoSlugField(populate_from='title', unique=True)
+    created = models.DateField(auto_now_add=True)
+    def __str__(self):
+        return self.title
+    class Meta:
+        verbose_name_plural = "06. Blogs" 
 
 
 
@@ -100,30 +118,10 @@ class CompanySetup(models.Model):
 #         verbose_name_plural = "04. Slider" 
 
 
-# class Contact(models.Model):
-#     name = models.TextField()
-#     email = models.TextField()
-#     contact = models.TextField()
-#     subject = models.TextField(null=True, blank=True)
-#     message = models.TextField()
-#     created = models.DateField(auto_now_add=True)
-
-#     def __str__(self):
-#         return self.name
-#     class Meta:
-#         verbose_name_plural = "05. Contact"
 
 
-# class Blog(models.Model):
-#     title = models.CharField(max_length=200)
-#     blog = models.TextField()
-#     image = models.ImageField(upload_to="blogs_images/",verbose_name="Blog Image (370*270)")
-#     slug = AutoSlugField(populate_from='title', unique=True)
-#     created = models.DateField(auto_now_add=True)
-#     def __str__(self):
-#         return self.title
-#     class Meta:
-#         verbose_name_plural = "06. Blogs" 
+
+
 
 # class Service(models.Model):
 #     service_title = models.CharField(max_length=200)

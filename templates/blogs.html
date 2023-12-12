@@ -1,0 +1,76 @@
+{% load static %}
+{% include 'header.html'   %}
+
+
+		<!--Page Title-->
+		<section class="page-title" style="background-image:url({% static 'images/background/3.jpg' %})">
+			<div class="auto-container">
+				<h1>Latest News</h1>
+				<ul class="bread-crumb clearfix">
+					<li><a href="{% url 'home' %}">Home</a></li>
+					<li class="active">Latest News</li>
+				</ul>
+			</div>
+		</section>
+		<!--End Page Title-->
+		
+		<!--Sidebar Page Container-->
+		<div class="sidebar-page-container">
+			<div class="auto-container">
+				<div class="row clearfix">
+					
+					<!--Content Side / Blogs Classic-->
+                    {% for blog in blogs %}
+					<div class="content-side col-md-4 col-sm-12 col-xs-12">
+						<div class="blog-classic">
+							
+							<!--News Block Four-->
+							<div class="news-block-four">
+								<div class="inner-box">
+									<a href="{% url 'blog_details' slug=blog.slug %}">
+										<div class="image">
+											<img src="{{blog.image.url}}" alt="" />
+										</div>
+									</a>
+									<div class="lower-box">
+										<div class="post-date"><i class="far fa-user"></i> By Admin &ensp;&ensp; <i class="far fa-calendar-alt"></i> {{blog.created}}</div>
+                                        <h3><a href="{% url 'blog_details' slug=blog.slug %}">{{blog.title}}</a></h3>
+										<div class="clearfix">
+											<a href="{% url 'blog_details' slug=blog.slug %}" class="read-more">Read More <span class="fa fa-angle-right"></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <!--Styled Pagination-->
+                        <!-- <div class="styled-pagination">
+                            <ul class="inner-box clearfix">
+                                <li><a href="#" class="active">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#"><span class="fa fa-angle-double-right"></span></a></li>
+                            </ul>
+                        </div> -->
+                        <!--End Styled Pagination-->
+
+				</div>
+			</div>
+		</div>
+		
+		<!--Call To Action-->
+		<section class="call-to-action">
+			<div class="auto-container">
+				<div class="row clearfix">
+					<div class="column col-md-8 col-sm-12 col-xs-12">
+						<h3 class="text">Our team is always here to help. Contact us today to learn how.</h3>
+					</div>
+					<div class="btn-column col-md-4 col-sm-12 col-xs-12">
+						<a href="contact.html" class="theme-btn btn-style-six">Get in touch</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--End Call To Action-->
+{% include 'footer.html'   %}

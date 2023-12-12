@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>{{data.company_name}}</title>
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
+	<link rel="icon" href="{% static 'images/favicon.png' %}">
+
+	<!--Stylesheets-->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/revolution/css/settings.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/revolution/css/layers.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/revolution/css/navigation.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.default.css' %}">
+
+	<!--Color Themes-->
+	<link rel="stylesheet" href="{% static 'css/default-theme.css' %}">
+</head>
+
+<body>
+	<div class="page-wrapper">
+
+		<!-- Preloader -->
+		<!-- <div class="preloader"></div> -->
+
+		<!-- Main Header-->
+		<header class="main-header">
+
+			<!--Header Top-->
+			<div class="header-top">
+				<div class="auto-container">
+					<div class="clearfix">
+						<div class="top-left">
+							<ul class="clearfix">
+								<li>{{data.company_name}}</li>
+							</ul>
+						</div>
+						<div class="top-right clearfix">
+							<ul class="clearfix">
+								<li>Follow us
+									<div class="social-links">
+										<a href="{{data.instagram_url}}"><span class="fab fa-instagram"></span></a>
+										<a href="{{data.facebook_url}}"><span class="fab fa-facebook-f"></span></a>
+										<a href="{{data.youtube_url}}"><span class="fab fa-youtube"></span></a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Header-Upper-->
+			<div class="header-upper">
+				<div class="auto-container clearfix">
+					<div class="pull-left logo-outer">
+						<div class="logo"><a href="{% url 'home' %}"><img src="{{ data.logo.url }}" alt="{{data.company_name}}" title="{{data.company_name}}"></a></div>
+					</div>
+					<div class="pull-right upper-right clearfix">
+						<nav class="main-menu">
+							<div class="navbar-header">
+								<!-- Toggle Button -->
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								</button>
+							</div>
+							<div class="navbar-collapse collapse clearfix">
+								<ul class="navigation clearfix">
+									<li class="current"><a href="{% url 'home' %}">Home</a></li>
+									<li><a href="about.html">About Us</a></li>
+									<li><a href="services.html">Services</a></li>
+									<li><a href="projects.html">Projects</a></li>
+									<li><a href="{% url 'blogs' %}">Blog</a></li>
+									<li><a href="{% url 'contact' %}">Contact</a></li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<!--End Header Upper-->
+
+			<!--Sticky Header-->
+			<div class="sticky-header">
+				<div class="auto-container clearfix">
+					<!--Logo-->
+					<div class="logo pull-left">
+						<a href="{% url 'home' %}" class="img-responsive"><img src="{% static 'images/logo-small.png' %}" alt="{{data.company_name}}" title="{{data.company_name}}"></a>
+					</div>
+					<!--Right Col-->
+					<div class="right-col pull-right">
+
+						<!-- Main Menu -->
+						<nav class="main-menu">
+							<div class="navbar-header">
+								<!-- Toggle Button -->
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							<div class="navbar-collapse collapse clearfix">
+								<ul class="navigation clearfix">
+									<li class="current"><a href="{% url 'home' %}">Home</a></li>
+									<li><a href="about.html">About Us</a></li>
+									<li><a href="services.html">Services</a></li>
+									<li><a href="projects.html">Projects</a></li>
+									<li><a href="{% url 'blogs' %}">Blog</a></li>
+									<li><a href="{% url 'contact' %}">Contact</a></li>
+								</ul>
+							</div>
+						</nav>
+						<!-- Main Menu End-->
+
+					</div>
+				</div>
+			</div>
+			<!--End Sticky Header-->
+
+		</header>
+		<!--End Main Header -->
+
+		
