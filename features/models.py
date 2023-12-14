@@ -54,6 +54,36 @@ class Blog(models.Model):
         verbose_name_plural = "06. Blogs" 
 
 
+class Project(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    image = models.ImageField(upload_to="projects_images/",verbose_name="Project Image (1200*800)")
+    slug = AutoSlugField(populate_from='title', unique=True)
+    created = models.DateField(auto_now_add=True)
+    def __str__(self):
+        return self.title
+    class Meta:
+        verbose_name_plural = "06. Projects" 
+
+class Partner(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to="partner_images/",verbose_name="Project Image (220*150)")
+    def __str__(self):
+        return self.name
+    class Meta:
+        verbose_name_plural = "06. Partners" 
+
+
+class Slider(models.Model):
+    heading = models.CharField(max_length=100)
+    description = models.CharField(max_length=255)
+    image = models.ImageField(upload_to="slider_images/",verbose_name="Project Image (1920*900)")
+    def __str__(self):
+        return self.heading
+    class Meta:
+        verbose_name_plural = "06. Slider" 
+
+
 
 # class HomeContent(models.Model):
 #     data_set = models.CharField(max_length=200)

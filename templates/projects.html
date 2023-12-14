@@ -1,0 +1,44 @@
+{% load static %}
+{% include 'header.html'   %}
+<section class="project-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <div class="content-column col-md-10 col-sm-12 col-xs-12 justify-content-center">
+                <div class="inner-column">
+                    <div class="sec-title style-two">
+                        <div class="sub-title">Venus Interiors: Our Portfolio of Interior Excellence</div>
+                        <h2>OUR PROJECTS</h2>
+                        <div class="separator"></div>
+                    </div>
+                    <div class="text">
+                        <p>Welcome to our Projects Page, a curated showcase of interior excellence. Dive into a world where spaces transform into art, each project a testament to our commitment to innovation, style, and functionality. From chic residences to dynamic commercial spaces, our portfolio reflects diverse design aesthetics tailored to meet unique client desires. Explore our transformative designs—a story of collaboration, creativity, and unparalleled interior excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class=" project-page-section">
+    <div class="auto-container">
+        
+        <!--MixitUp Galery-->
+        <div class="mixitup-gallery">
+            <div class="filter-list row clearfix" id="MixItUp004DD8">
+                {% for project in projects %}
+                    
+                <!--Gallery Block-->
+                <div class="gallery-block mix architecture facility all col-md-6 col-sm-6 col-xs-12" style="display: inline-block;">
+                    <div class="item">
+                        <div><img src="{{project.image.url}}" alt=""></div>
+                        <div class="info">
+                            <h3><a href="project-single.html">{{project.title}}</a></h3>
+                            <h4><a href="project-single.html">{{project.description}} </a></h4>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>            
+        </div>
+    </div>
+</section>
+{% include 'footer.html'   %}

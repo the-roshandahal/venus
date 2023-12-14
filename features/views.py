@@ -4,7 +4,13 @@ from .models import *
 # Create your views here.
 
 def home(request):
+    sliders = Slider.objects.all()
+    projects = Project.objects.all()
+    partners = Partner.objects.all()
     context = {
+        'sliders':sliders,
+        'partners':partners,
+        'projects':projects,
     }
     return render(request,'index.html',context)
 
@@ -30,6 +36,22 @@ def blogs(request):
         'blogs':blogs,
     }
     return render(request,'blogs.html',context)
+
+
+def projects(request):
+    projects = Project.objects.all()
+    context = {
+        'projects':projects,
+    }
+    return render(request,'projects.html',context)
+
+
+def services(request):
+    services = Project.objects.all()
+    context = {
+        'services':services,
+    }
+    return render(request,'services.html',context)
     
 
 def blog_details(request,slug):

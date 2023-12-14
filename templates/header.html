@@ -9,8 +9,8 @@
 	<title>{{data.company_name}}</title>
 
 	<!--Favicon-->
-	<link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
-	<link rel="icon" href="{% static 'images/favicon.png' %}">
+	<link rel="shortcut icon" href="{{data.logo.url}}">
+	<link rel="icon" href="{{data.logo.url}}">
 
 	<!--Stylesheets-->
 	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
@@ -78,9 +78,9 @@
 							<div class="navbar-collapse collapse clearfix">
 								<ul class="navigation clearfix">
 									<li class="current"><a href="{% url 'home' %}">Home</a></li>
-									<li><a href="about.html">About Us</a></li>
-									<li><a href="services.html">Services</a></li>
-									<li><a href="projects.html">Projects</a></li>
+									<!-- <li><a href="/">About Us</a></li> -->
+									<li><a href="{% url 'services' %}">Services</a></li>
+									<li><a href="{% url 'projects' %}">Projects</a></li>
 									<li><a href="{% url 'blogs' %}">Blog</a></li>
 									<li><a href="{% url 'contact' %}">Contact</a></li>
 								</ul>
@@ -96,7 +96,7 @@
 				<div class="auto-container clearfix">
 					<!--Logo-->
 					<div class="logo pull-left">
-						<a href="{% url 'home' %}" class="img-responsive"><img src="{% static 'images/logo-small.png' %}" alt="{{data.company_name}}" title="{{data.company_name}}"></a>
+						<a href="{% url 'home' %}" class="img-responsive"><img src="{{data.logo.url}}" alt="{{data.company_name}}" title="{{data.company_name}}"></a>
 					</div>
 					<!--Right Col-->
 					<div class="right-col pull-right">
@@ -114,9 +114,9 @@
 							<div class="navbar-collapse collapse clearfix">
 								<ul class="navigation clearfix">
 									<li class="current"><a href="{% url 'home' %}">Home</a></li>
-									<li><a href="about.html">About Us</a></li>
-									<li><a href="services.html">Services</a></li>
-									<li><a href="projects.html">Projects</a></li>
+									<!-- <li><a href="/">About Us</a></li> -->
+									<li><a href="{% url 'services' %}">Services</a></li>
+									<li><a href="{% url 'projects' %}">Projects</a></li>
 									<li><a href="{% url 'blogs' %}">Blog</a></li>
 									<li><a href="{% url 'contact' %}">Contact</a></li>
 								</ul>

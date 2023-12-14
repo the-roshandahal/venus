@@ -1,0 +1,94 @@
+{% load static %}
+{% include 'header.html'   %}
+<section class="services-section-two style-two">
+    <div class="auto-container">
+        <!--Services Title-->
+        <div class="services-title">
+            <h3>We believe architecture is critically important to addressing<br>the most pressing challenges of our time</h3>
+            <div class="separator"></div>
+        </div>
+        <div class="row clearfix">
+
+            <!--Services Block-->
+            <div class="services-block-two style-two col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                    <div class="icon-box">
+                        <img src="{% static 'images/services/icon-1.svg' %}" alt="">
+                    </div>
+                    <h3><a href="">Architecture</a></h3>
+                    <div class="text">Provides an opportunity to not only add beauty and structure to the world, but to profoundly improve the conditions for people.</div>
+                </div>
+            </div>
+
+            <!--Services Block-->
+            <div class="services-block-two style-two col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                    <div class="icon-box">
+                        <img src="{% static 'images/services/icon-2.svg' %}" alt="">
+                    </div>
+                    <h3><a href="">Consulting &amp; Planning</a></h3>
+                    <div class="text">Our team’s analytical tools and user engagement activities inspire creativity and collaboration that enhance any project.</div>
+                </div>
+            </div>
+
+            <!--Services Block-->
+            <div class="services-block-two style-two col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                    <div class="icon-box">
+                        <img src="{% static 'images/services/icon-3.svg' %}" alt="">
+                    </div>
+                    <h3><a href="">Construction</a></h3>
+                    <div class="text">Across our firm, we employ a diverse range of professionals with a successful record delivering high-quality projects.</div>
+                </div>
+            </div>
+
+            <!--Services Block-->
+            <div class="services-block-two style-two col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                    <div class="icon-box">
+                        <img src="{% static 'images/services/icon-4.svg' %}" alt="">
+                    </div>
+                    <h3><a href="">Engineering</a></h3>
+                    <div class="text">We create innovative engineering systems that help organizations achieve bold business and performance goals.</div>
+                </div>
+            </div>
+
+            <!--Services Block-->
+            <div class="services-block-two style-two col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                    <div class="icon-box">
+                        <img src="{% static 'images/services/icon-5.svg' %}" alt="">
+                    </div>
+                    <h3><a href="">Interior Design</a></h3>
+                    <div class="text">We combine creativity, passion, research and expertise in multiple areas to deliver interior spaces that empower occupants.</div>
+                </div>
+            </div>
+
+            <!--Services Block-->
+            <div class="services-block-two style-two col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                    <div class="icon-box">
+                        <img src="{% static 'images/services/icon-6.svg' %}" alt="">
+                    </div>
+                    <h3><a href="">Facility Optimization</a></h3>
+                    <div class="text">We can efficiently create a living dataset of your assets and integrate into your computerized maintenance management.</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section class="call-to-action">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <div class="column col-md-8 col-sm-12 col-xs-12">
+                <h4 class="text">Our team is always here to help. Contact us today to learn how.</h4>
+            </div>
+            <div class="btn-column col-md-4 col-sm-12 col-xs-12">
+                <a href="{% url 'contact' %}" class="theme-btn btn-style-six">Get in touch</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% include 'footer.html'   %}
