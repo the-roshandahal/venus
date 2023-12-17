@@ -37,7 +37,7 @@ class Contact(models.Model):
     def __str__(self):
         return self.name
     class Meta:
-        verbose_name_plural = "05. Contact"
+        verbose_name_plural = "06. Contact"
 
 
 
@@ -51,7 +51,7 @@ class Blog(models.Model):
     def __str__(self):
         return self.title
     class Meta:
-        verbose_name_plural = "06. Blogs" 
+        verbose_name_plural = "05. Blogs" 
 
 
 class Project(models.Model):
@@ -63,7 +63,7 @@ class Project(models.Model):
     def __str__(self):
         return self.title
     class Meta:
-        verbose_name_plural = "06. Projects" 
+        verbose_name_plural = "03. Projects" 
 
 class Partner(models.Model):
     name = models.CharField(max_length=100)
@@ -71,7 +71,7 @@ class Partner(models.Model):
     def __str__(self):
         return self.name
     class Meta:
-        verbose_name_plural = "06. Partners" 
+        verbose_name_plural = "04. Partners" 
 
 
 class Slider(models.Model):
@@ -81,7 +81,7 @@ class Slider(models.Model):
     def __str__(self):
         return self.heading
     class Meta:
-        verbose_name_plural = "06. Slider" 
+        verbose_name_plural = "02. Slider" 
 
 
 
